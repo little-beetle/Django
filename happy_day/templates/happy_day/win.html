@@ -1,0 +1,50 @@
+{% extends 'happy_day/base.html' %}
+
+{% block body %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .block {
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        color: #007bff; /* Синій колір тексту */
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+</style>
+
+<section>
+    <div class="block">
+        <h1> ПЕРЕМОГА БУДЕ </h1>
+        <div>
+            <img src="../../static/img/flag.gif" alt="FLAG">
+        </div>
+    </div>
+</section>
+
+{% endblock %}

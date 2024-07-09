@@ -1,0 +1,66 @@
+{% extends 'happy_day/base.html' %}
+
+{% block title %}
+    Hello
+{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        color: #333;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    section {
+    display: flex;
+        justify-content: center;
+    }
+
+    .block {
+    margin-top: 20px;
+            align-items: center;
+        display: flex;
+    flex-direction: column;
+        max-width: 80%; /* Максимальна ширина блоку */
+        text-align: center; /* Центруємо зображення */
+    }
+
+    img {
+        max-width: 70%; /* Зображення не більше блоку */
+    }
+
+       .link {
+        margin-top: 20px; /* Відступ зверху */
+        display: inline-block; /* Розташування по центру */
+        text-decoration: none; /* Видалення підкреслення */
+        background-color: #4285f4; /* Колір фону */
+        color: #fff; /* Колір тексту */
+        padding: 10px 20px; /* Відступи від тексту до меж кнопки */
+        border-radius: 5px; /* Закруглення кутів */
+        transition: background-color 0.3s ease; /* Плавна анімація зміни кольору фону */
+    }
+
+    .link:hover {
+        background-color: #3367d6; /* Колір фону при наведенні */
+    }
+</style>
+
+<main>
+    <section>
+        <div class="block">
+            <img src="../../static/img/qrcode.png" alt="">
+                        <a class="link" href="https://forms.gle/TqS5D3LSQubSe9o7A" target="_blank">Перейти до форми</a>
+
+        </div>
+    </section>
+</main>
+
+{% endblock %}

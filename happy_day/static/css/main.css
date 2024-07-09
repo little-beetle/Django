@@ -1,0 +1,56 @@
+<style>
+    /* Стилі для навігаційного бару */
+    body {
+        font-family: Arial, Tahoma, Serif;
+        color: #263238;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        background: #cfd8dc;
+        padding: 1rem 2rem;
+    }
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        padding: 0 1rem;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #0d47a1;
+        transition: color 0.3s ease;
+    }
+
+    /*nav a:hover {
+        color: #935621f0;
+    }*/
+    .nav-link a:hover {
+        font-size: 1.5em; /* збільшення розміру шрифту при наведенні */
+        color: #ff5722; /* інший колір при наведенні */
+    }
+
+
+    @media only screen and (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav ul {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav li {
+            padding: 1rem 0;
+        }
+    }
+</style>

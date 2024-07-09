@@ -1,0 +1,93 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    {% block extra_css %}{% endblock %}
+    <title>
+        {% block title %}
+            Hi-Hi
+        {% endblock %}
+    </title>
+
+    <style>
+        /* Стилі для навігаційного бару */
+        body {
+            font-family: Arial, Tahoma, Serif;
+            color: #263238;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background: #cfd8dc;
+            padding: 1rem 2rem;
+            display: flex;
+    justify-content: space-between;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+                align-items: center;
+        }
+
+        nav li {
+            padding: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0d47a1;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff5722;
+        }
+    .nav-link {
+            transition: font-size 0.3s ease, color 0.3s ease; /* плавна анімація зміни розміру шрифту і кольору тексту */
+}
+    .nav-link:hover {
+        font-size: 1.5em; /* збільшення розміру шрифту при наведенні */
+        color: #ff5722; /* інший колір при наведенні */
+    }
+        @media only screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav li {
+                padding: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <h2><a href="{% url 'happy_day:index' %}">База</a></h2>
+        <ul>
+            <li><a href="{% url 'happy_day:postcard' %}">Інтерактив</a></li>
+            <li><a href="{% url 'happy_day:greeting' %}">Посилання</a></li>
+            <li><a href="{% url 'happy_day:win' %}">Перемога <span class="nav-link">буде</span></a></li>
+        </ul>
+    </nav>
+</header>
+
+{% block body %}
+
+{% endblock %}
+</body>
+</html>
